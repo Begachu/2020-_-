@@ -1,17 +1,19 @@
 package num2;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
-	public static void main(String args[]) {
+	public static void main(String args[]) throws NumberFormatException, IOException {
 		//입력을 받고 저장하는 부분
-		Scanner sc = new Scanner(System.in);
-		int size = sc.nextInt();
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int size = Integer.parseInt(br.readLine());
 		int[] array = new int[size];
 		for(int i=0; i<size; i++) {
-			array[i] = sc.nextInt();
+			array[i] = Integer.parseInt(br.readLine());
 		}
-		sc.close();
+		br.close();
 		Main m = new Main(array);
 		//알고리즘 부분
 		//m.merge_sort();
