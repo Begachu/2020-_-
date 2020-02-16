@@ -87,8 +87,10 @@ public class Main {
 	}
 	
 	public void print() {
+		StringBuilder sb = new StringBuilder();
 		for(int i=0; i<this.array.length; i++) {
-			System.out.println(array[i]);
+			sb.append(array[i]+"\n");
 		}
+		System.out.print(sb);
 	}
 }
